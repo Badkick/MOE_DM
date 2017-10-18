@@ -1,0 +1,91 @@
+{
+  "v": "4.0",
+  "workspace": {
+    "defaultEnv": "ubuntu_python2.7",
+    "environments": [
+      {
+        "name": "ubuntu_python2.7",
+        "machineConfigs": [
+          {
+            "limits": {
+              "ram": 2000
+            },
+            "name": "ws-machine",
+            "type": "docker",
+            "source": {
+              "location": "http://beta.codenvy.com/api/recipe/recipejrihnjqeoxyjd88p/script",
+              "type": "dockerfile"
+            },
+            "dev": true,
+            "servers": [],
+            "envVariables": {},
+            "links": []
+          }
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "links": [],
+        "name": "web-python2.7-simple",
+        "attributes": {
+          "vcs.provider.name": [
+            "git"
+          ],
+          "git.current.branch.name": [
+            "master"
+          ],
+          "contribute_to_branch": [
+            "master"
+          ],
+          "git.repository.remotes": [
+            "https://github.com/che-samples/web-python2.7-simple.git"
+          ]
+        },
+        "type": "blank",
+        "source": {
+          "location": "https://github.com/che-samples/web-python2.7-simple.git",
+          "type": "git",
+          "parameters": {}
+        },
+        "path": "/web-python2.7-simple",
+        "problems": [],
+        "mixins": [
+          "pullrequest",
+          "git"
+        ]
+      }
+    ],
+    "name": "ubuntu_python2.7",
+    "commands": [
+      {
+        "commandLine": "cd ${current.project.path} && sudo virtualenv /env && sudo pip install -r requirements.txt && python main.py",
+        "name": "run",
+        "attributes": {
+          "previewUrl": "http://${server.port.8080}"
+        },
+        "type": "custom"
+      }
+    ],
+    "links": []
+  },
+  "ide": {
+    "onProjectsLoaded": {
+      "actions": [
+        {
+          "properties": {
+            "name": "run"
+          },
+          "id": "runCommand"
+        },
+        {
+          "properties": {
+            "file": "/web-python2.7-simple/main.py"
+          },
+          "id": "openFile"
+        }
+      ]
+    }
+  },
+  "name": "Python2.7"
+}
