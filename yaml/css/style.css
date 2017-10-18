@@ -1,0 +1,166 @@
+body {
+  background: skyblue url("http://www.twitpaper.com/wp-content/uploads/sites/8/2014/01/1389272877_Clouds_Pattern.jpg") fixed repeat;
+}
+
+.main {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.row {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.container {
+  max-width: 600px;
+  background: #fff;
+  height: 100%;
+  padding: 20px 50px;
+  margin-bottom: 1em;
+  border: 2px #cde solid;
+  border-radius: 10px;
+}
+
+.button-modify {
+	float:right;
+	margin-left:40px;
+
+}
+.button-delete {
+	float:right; 
+	margin-right:20px;
+	margin-left:20px;
+}
+.button-plus {
+	margin-right:15px;
+}
+.button-ok {
+	margin-right:15px;
+}
+.button-precedent{
+	margin-left:auto;
+}
+.button-enregistrer{
+	margin-right:auto;
+}
+.scrollbar
+{
+	margin-left: 30px;
+	background: #F5F5F5;
+	overflow:hidden;
+	overflow-y: scroll;
+	margin-bottom: 25px;
+}
+
+.list-group-item{
+	margin-right:15px;
+}
+/*
+ *  STYLE 1
+ */
+
+#style-1::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+#style-1::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5;
+}
+
+#style-1::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+
+
+#index{height:158px; width:auto; font-size:22px;}
+
+#form{height:265px; width:100%; font-size:22px;}
+
+#title {
+  font-family: "Impact", Helvetica, Arial, sans-serif;
+  color: #42c8f4;
+  font-size: 3.2em;
+  margin-top:0px;
+  padding-bottom: 15px;
+  margin-left: auto;
+  margin-right:auto;
+}
+
+#twitter {
+  font-size: 40px;
+  margin-top: 0.5em;
+}
+
+#quote-box {
+  min-height: 15em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+#quote-block {
+  position: relative;
+}
+
+#quote {
+  font-size: 170%;
+  margin-left: auto;
+  margin-right:auto;
+
+}
+
+footer h3 {
+  color: #abc;
+  margin: 0;
+  padding: 0.2em;
+  font-size: 120%;
+  font-weight: normal;
+}
+footer h3 a {
+  color: #abc;
+  text-decoration: underline;
+}
+
+#menu-vertical, #menu-vertical ul {
+  padding:0;
+  margin:0;
+  list-style:none;
+  width: 180px; /* seule ligne rajoutée */
+}
+
+#menu-vertical li {
+  position: relative;
+  background:#EFEFEF; /* juste pour cacher le texte de la page en-dessous */
+}
+
+#menu-vertical a {
+  display:block;
+  text-decoration: none;
+  color: #000;
+}
+
+#menu-vertical ul {
+  position: absolute;
+  left:-999em;
+}
+
+#menu-vertical li:hover ul {
+  top: 0;
+  left: 180px;
+}
+
+.aire-texte{
+	height:100%;
+	width:200%;
+	margin-left:10px;
+}

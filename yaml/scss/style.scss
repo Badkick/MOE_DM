@@ -1,0 +1,56 @@
+
+
+body {
+  background: skyblue url("http://www.twitpaper.com/wp-content/uploads/sites/8/2014/01/1389272877_Clouds_Pattern.jpg") fixed repeat;
+}
+
+.main { margin-top: 100px; }
+
+.container {
+  max-width: 600px;
+  background: #fff;
+  height: 100%;
+  padding: 20px 50px;
+  margin-bottom: 1em;
+  border: 2px #cde solid;
+  border-radius: 10px;
+}
+
+#title {
+  font-family: "Impact", Helvetica, Arial, sans-serif;
+  color : #42c8f4;
+  font-size: 3.2em;
+  padding-bottom: 0.1em;
+  margin-left:80px;
+}
+
+#twitter {
+  font-size: 40px;
+  margin-top: 0.5em;
+}
+
+#quote-box {
+  min-height: 15em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#quote-block{
+  position: relative;
+}
+
+#quote {
+  font-size: 150%;
+}
+
+footer h3 {
+  color: #abc;
+  margin: 0;
+  padding: 0.2em;
+  font-size: 120%;
+  font-weight: normal;
+  a {
+    color: #abc;
+    text-decoration: underline;
+  }
+}
