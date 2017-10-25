@@ -5,14 +5,12 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 db = SQLAlchemy(app)
 
 
-class ConfigurationList(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.Text)
-    configurations = db.relationship('Configuration', backref='Configuration_list', lazy='dynamic')
-
-
 class Configuration(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    label = db.Column(db.Text)
-    isDone = db.Column(db.Boolean)
-    configuration_list_id = db.Column(db.Integer, db.ForeignKey('configuration_list.id'))
+    id_Configuration = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.Text)
+    creator = db.Column(db.Text)
+    date_e = db.Column(db.DateTime)
+    date_m = db.Column(db.DateTime)
+    id_mutable = db.Column(db.Integer)
+    mutable = db.Column(db.Text)
+

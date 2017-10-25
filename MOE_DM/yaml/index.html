@@ -32,8 +32,9 @@
       <blockquote id="quote-block">
 		<div class="scrollbar" id="style-1">
 		<nav id="index">
-            <ul class="list-group">
-                <li class="list-group-item">Fichier YAML numéro 1
+            <ul class="list-group list-group-flush">
+				{% for conf in confs %}
+                <li class="list-group-item">{{conf.id}}
 					<button type="button" class="btn btn-danger btn-sm button-delete">
 					<span class="glyphicon glyphicon-remove"></span> 
 					</button>
@@ -41,54 +42,7 @@
 					<span class="glyphicon glyphicon-pencil"></span> 
 					</button>
 				</li>
-                <li class="list-group-item">Fichier YAML numéro 2
-					<button type="button" class="btn btn-danger btn-sm button-delete">
-					<span class="glyphicon glyphicon-remove"></span> 
-					</button>
-					<button type="button" class="btn btn-info btn-sm button-modify">
-					<span class="glyphicon glyphicon-pencil"></span> 
-					</button>
-				</li>
-				<li class="list-group-item">Fichier YAML numéro 3
-					<button type="button" class="btn btn-danger btn-sm button-delete">
-					<span class="glyphicon glyphicon-remove"></span> 
-					</button>
-					<button type="button" class="btn btn-info btn-sm button-modify">
-					<span class="glyphicon glyphicon-pencil"></span> 
-					</button>
-				</li>
-				<li class="list-group-item">Fichier YAML numéro 4
-					<button type="button" class="btn btn-danger btn-sm button-delete">
-					<span class="glyphicon glyphicon-remove"></span> 
-					</button>
-					<button type="button" class="btn btn-info btn-sm button-modify">
-					<span class="glyphicon glyphicon-pencil"></span> 
-					</button>
-				</li>
-				<li class="list-group-item">Fichier YAML numéro 5
-					<button type="button" class="btn btn-danger btn-sm button-delete">
-					<span class="glyphicon glyphicon-remove"></span> 
-					</button>
-					<button type="button" class="btn btn-info btn-sm button-modify">
-					<span class="glyphicon glyphicon-pencil"></span> 
-					</button>
-				</li>
-				<li class="list-group-item">Fichier YAML numéro 6
-					<button type="button" class="btn btn-danger btn-sm button-delete">
-					<span class="glyphicon glyphicon-remove"></span> 
-					</button>
-					<button type="button" class="btn btn-info btn-sm button-modify">
-					<span class="glyphicon glyphicon-pencil"></span> 
-					</button>
-				</li>
-				<li class="list-group-item">Fichier YAML numéro 7
-					<button type="button" class="btn btn-danger btn-sm button-delete">
-					<span class="glyphicon glyphicon-remove"></span> 
-					</button>
-					<button type="button" class="btn btn-info btn-sm button-modify">
-					<span class="glyphicon glyphicon-pencil"></span> 
-					</button>
-				</li>
+                {% endfor %}
             </ul>
         </nav>
 		</div>
