@@ -20,7 +20,23 @@ def configuration_list():
    # Configuration.query.filter_by(id=configuration_id).delete()
    # return redirect(url_for("generate_form", configuration_list_name="default"))
 
-    
+@app.route("/creer")
+def creer_configuration():
+    return render_template("yaml-form.html")
+
+@app.route("/creer/enregistrer")
+def ajouter_configuration():
+    from database import Configuration
+
+    configuration_mutable = request.form["configuration_mutable"]
+
+    new_configuration = Configuration()
+    new_configuration.mutable= request.form["configuration_mutable"]
+    db.session.add(new_configuration)
+
+    configurations = Configuration.query.all()
+    return redirect(url_for("configuration_list"))
+
 
 
 

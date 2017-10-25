@@ -5,12 +5,16 @@
   <title>YAML</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
   <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  
 </head>
 
 
@@ -20,26 +24,48 @@
   <!-- fancy page title -->
   <div class="row">
    <h1 id="title">Générateur de fichier YAML</h1>
-   <p id="quote">Veuillez remplir le formulaire ci-dessous</p>
+   <p id="quote">Liste des fichiers YAML existants</p>
   </div>
   <!-- quote main content -->
   <div class="row">
     <div id="quote-box">
       <blockquote id="quote-block">
-		<nav id="form">
-            <textarea class="scrollbar aire-texte" id="style-1">
-			</textarea>
+		<div class="scrollbar" id="style-1">
+		<nav id="index">
+            <ul class="list-group list-group-flush">
+				{% for conf in confs %}
+                <li class="list-group-item">{{conf.id}}
+					<button type="button" class="btn btn-danger btn-sm button-delete">
+					<span class="glyphicon glyphicon-remove"></span> 
+					</button>
+					<button type="button" class="btn btn-info btn-sm button-modify">
+					<span class="glyphicon glyphicon-pencil"></span> 
+					</button>
+				</li>
+                {% endfor %}
+            </ul>
+        </nav>
+		</div>
+        <!-- tweet button 
+        <a href="https://twitter.com/intent/tweet?text=" class="twitter-hashtag-button pull-right">Tweet this quote!</a>
+      
+        <footer><cite title="Source Title" id="author">The Developer</cite></footer>
+        --->
       </blockquote>
     </div>
   </div>
 
   <!--new quote button-->
   <div class="row">
-	<a href="index.html" class="btn button-precedent" onclick="return confirm('Vos modifications seront perdues. Confirmer ?')"><button class="pull-right btn btn-lg btn-warning"><i class="glyphicon glyphicon-arrow-left button-ok"></i>Précédent</button></a>
-    <a href="index.html" class="btn button-enregistrer"><button class="pull-right btn btn-lg btn-primary"><i class="glyphicon glyphicon-ok button-ok"></i>Enregistrer</button></a>
+    <a href={{url_for("creer_configuration")}} class="btn btn-block"><button class="pull-right btn btn-block btn-lg btn-primary"><i class="glyphicon glyphicon-plus button-plus"></i>Créer un nouveau document YAML</button></a>
   </div>
 </div>
 
+<!-- credits -->
+<footer class="container">
+  <h3 class="text-center">IMT Atlantique
+  <br><br>Anaëlle Zanella, Numa Béguerie, Philippe Blois</h3>
+</footer>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.min.js'></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
 <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>

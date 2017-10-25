@@ -6,7 +6,7 @@ db = SQLAlchemy(app)
 
 
 class Configuration(db.Model):
-    id_Configuration = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.Text)
     creator = db.Column(db.Text)
     date_e = db.Column(db.DateTime)
