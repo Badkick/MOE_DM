@@ -22,13 +22,16 @@ def configuration_list():
 
 @app.route("/creer")
 def creer_configuration():
-    return render_template("yaml-form.html")
+    from database import Configuration
+    new_configuration = Configuration()
+    return render_template("yaml-form.html", Configuration=new_configuration)
 
 @app.route("/creer/enregistrer")
 def ajouter_configuration():
     from database import Configuration
 
     configuration_mutable = request.form["configuration_mutable"]
+
 
     new_configuration = Configuration()
     new_configuration.mutable= request.form["configuration_mutable"]

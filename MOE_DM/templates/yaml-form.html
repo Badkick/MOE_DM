@@ -29,8 +29,9 @@
 
 
         <nav id="form">
-        <form name="mutable" action="{{ url_for('creer_configuration') }}" method="post" class="scrollbar aire-texte" id="style-1">
-                        <div class="form-group">
+
+        <textarea id="form" name="mutable" action="{{ url_for('creer_configuration') }}" method="post" class="scrollbar aire-texte" id="style-1">
+                        <!--<div class="form-group">
                             <input class="form-control" name="configuration_mutable" type="text" placeholder="Add config"/>
                             <input type="hidden" name="conf_id" value="{{ Configuration.id }}"/>
                             <input type="hidden" name="conf_name" value="{{ Configuration.name }}"/>
@@ -42,15 +43,15 @@
 
 
                         </div>
-                        <div class="form-group">
+                        <div class="form-group">-->
                             <input class="btn btn-success float-right" type="submit"/>
                       </div>
-        </form>
+        </textarea>
 
 
 
-            <textarea >
-			</textarea>
+
+
       </blockquote>
     </div>
   </div>
