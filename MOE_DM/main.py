@@ -26,7 +26,7 @@ def creer_configuration():
     new_configuration = Configuration()
     return render_template("yaml-form.html", Configuration=new_configuration)
 
-@app.route("/creer/enregistrer")
+@app.route("/creer/enregistrer", methods=["POST"])
 def ajouter_configuration():
     from database import Configuration
 
@@ -38,7 +38,7 @@ def ajouter_configuration():
     db.session.add(new_configuration)
 
     configurations = Configuration.query.all()
-    return redirect(url_for("configuration_list"))
+    return redirect(url_for("configuration_list()"))
 
 
 
